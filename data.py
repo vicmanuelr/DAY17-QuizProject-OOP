@@ -2,6 +2,7 @@ import requests as req
 
 r = req.get("https://opentdb.com/api.php?amount=10&category=11&type=boolean").json()
 question_data = r["results"]
+# ------------------------------------------- data example ------------------------------------------------ #
 # question_data = [
 #     {"text": "A slug's blood is green.", "answer": "True"},
 #     {"text": "The loudest animal is the African Elephant.", "answer": "False"},
