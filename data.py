@@ -1,6 +1,8 @@
 import requests as req
 
-r = req.get("https://opentdb.com/api.php?amount=10&category=11&type=boolean").json()
+r = req.get("https://opentdb.com/api.php?amount=10&category=11&type=boolean")
+r.raise_for_status()
+r = r.json()
 question_data = r["results"]
 # ------------------------------------------- data example ------------------------------------------------ #
 # question_data = [
